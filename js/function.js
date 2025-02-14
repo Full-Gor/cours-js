@@ -7,44 +7,44 @@
 
  //Elle peut recevpor des paramètre, effectuer des opérations et retourner un resultat un resultat
 
- // on peut declarer une fonction en utilisant les mot clé "function"
+//  // on peut declarer une fonction en utilisant les mot clé "function"
 
- function direBonjour(){
-    console.log("bonjour")
- }
+//  function direBonjour(){
+//     console.log("bonjour")
+//  }
 
- //ici direBonjour est une fonction que affiche bonjour dans la console 
- // pour executé cette function on doit l'appeler, ne pas ounlier les parentheses
+//  //ici direBonjour est une fonction que affiche bonjour dans la console 
+//  // pour executé cette function on doit l'appeler, ne pas ounlier les parentheses
 
- direBonjour()//affiche "bonjour dans la console"
+//  direBonjour()//affiche "bonjour dans la console"
 
- function console(message){
+//  function console(message){
 
-    console.log(message)
- }
+//     console.log(message)
+//  }
 
- consol("j'écris mon message")
+//  consol("j'écris mon message")
 
- let b=12
+//  let b=12
 
- consol(typeof b)
+//  consol(typeof b)
 
- let c=3
- let d=4
+//  let c=3
+//  let d=4
 
- function fois2(n){
-return n*2
+//  function fois2(n){
+// return n*2
 
- }
+//  }
 
- console.log( fois2(c) )
- console.log( fois2(d) )
- console( fois2(d) )
+//  console.log( fois2(c) )
+//  console.log( fois2(d) )
+//  console( fois2(d) )
 
- // ecrire une fonction reutilisable avec paramètre qui ecris un texte dans le dom avec write()
+//  // ecrire une fonction reutilisable avec paramètre qui ecris un texte dans le dom avec write()
 
- let text = "je suis le texte"
- let text2= "je usis le 2eme texte"
+//  let text = "je suis le texte"
+//  let text2= "je usis le 2eme texte"
 
  // Exercice 1 : Somme de deux nombres
 // Écrire une fonction somme(a, b) qui prend deux nombres en paramètres et retourne leur somme.
@@ -60,7 +60,16 @@ return n*2
 // Exercice 3 : Vérifier si un nombre est pair ou impair
 // Écrire une fonction pairOuImpair(n) qui retourne "Pair" si n est un nombre pair, sinon "Impair".
  
- 
+//  function pairOuImpair(n){
+//    if (n % 2 === 0){
+//       return "pair";
+//    }else{
+//       return "Impair";
+//    }
+//    }   
+//    console.log(pairOuImpair(98)); 
+
+
 // Exercice 4 : Comparer deux nombres
 // Écrire une fonction comparer(a, b) qui prend deux nombres et affiche :
  
@@ -75,7 +84,40 @@ return n*2
  
 // Exercice 6 : Calculatrice simple
 // Écrire une fonction calculer(a, b, operateur) qui prend deux nombres et un opérateur (+, -, *, /) et retourne le résultat.
- 
+ function calculer (a,b,operateur){
+
+switch(operateur){
+   case "+":
+      return a+b
+      case"-":
+      return a-b
+      case"*":
+      return a*b
+
+      case "/" :
+         if(b !== 0){
+            return a /b
+         }else{
+            return "erreur : division par zero impossible"
+         }
+         case "/" :
+
+         //aperateur conditionnel(ternaire) pour simplifier le if et le else 
+         //condition ? si vrai : si faux
+         //si b !==0 alors( ? ) division sinon ( : ) 'erreur...
+         return b!==0 ? a / b : "erreur : division par zero impossible"
+
+      default:
+         return "operateur invalide"
+   }
+}
+console.log(calculer(10,5,"+"));
+console.log(calculer(10,5,"-"));
+console.log(calculer(10,5,"*"));
+console.log(calculer(10,5,"/"));
+console.log(calculer(10,5,"/"));
+
+
  
  
  
