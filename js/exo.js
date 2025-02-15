@@ -113,7 +113,7 @@
 // console.log(max(3, 7)); // Affiche 7 
  
 // Exercice 2 : Vérifier si un nombre est positif, négatif ou nul
-sf
+
 // function verifierNombre(n) {
 //     if (n > 0) {
 //         return "positif";
@@ -158,3 +158,212 @@ sf
  
 // Exercice 7 : Deviner un animal
 // Écrire une fonction animalCri(animal) qui prend un nom d'animal ("chien", "chat", "vache", "oiseau") et retourne le son qu'il fait.
+
+
+// ***********************EXO 1 
+// let fruits = ["pomme", "banane", "cerise", "orange"];
+// console.log("Tableau initial:", fruits);
+
+// // ////"kiwi" à la fin du tableau
+// //  function ajouterFin(fruit) {
+// // fruits.push(fruit);
+// //  }
+// //  ajouterFin("kiwi");
+// //   console.log("Après ajout de 'kiwi' à la fin:", fruits);
+
+// // //"ananas" au début du tableau
+// // function ajouterDebut(fruit) {
+// //     fruits.unshift(fruit);
+// // }
+// //  ajouterDebut("ananas");
+// // console.log("Après ajout de 'ananas' au début:", fruits);
+
+// // //supprimer le dernier élément du tableau
+// //  function supprimerDernier() {
+// //      fruits.pop();
+// //  }
+// //  supprimerDernier();
+// //  console.log("Après suppression du dernier élément:", fruits);
+
+// // //afficher la longueur du tableau
+//  function afficherLongueur() {
+// fruits.length();
+// afficherLongueur();
+//     console.log("Longueur du tableau:", fruits.length);
+// }
+
+
+
+
+
+
+//*********************EXO2 */
+// //RECHERCHER DANS UN TABLEAU
+// // Créer le tableau initial
+// let nombres = [10, 25, 45, 38, 50];
+// // console.log("Tableau initial:", nombres);
+
+// // // Vérifier si le nombre 30 est présent dans le tableau
+//  function verifierPresence(nombre) {
+//      if (nombres.includes(nombre)) {
+//          console.log(nombre + " est présent dans le tableau.");
+//      } else {
+//          console.log(nombre + " n'est pas présent dans le tableau.");
+//      }
+//  }
+//  verifierPresence(30);
+
+// // Trouve l'index de 45
+//  function trouverIndex(nombre) {
+//      let index = nombres.indexOf(nombre);
+//      console.log("L'index de " + nombre + " est " + index);
+//  }
+//  trouverIndex(45);
+//*********************EXO3 */
+// FILTRER UN TABLEAU
+
+
+// // // // // Créer le tableau initial
+//   let nombres = [2, 5, 8, 11, 14, 17];
+// // // // console.log("Tableau initial:", nombres);
+
+
+
+// // // // Créer un nouveau tableau avec des nombres supérieurs à 10
+//   let nombresSuperieursA10 = nombres.filter(function(nombre) {
+//       return nombre > 10;
+//   });
+//   console.log("Nouveau tableau avec des nombres supérieurs à 10:", nombresSuperieursA10);
+
+
+// let utilisateurs = [
+//     ["Alice Dupont", "alice@example.com", "admin"],
+//     ["Bob Martin", "bob@example.com", "utilisateur"],
+//     ["Charlie Durand", "charlie@example.com", "moderateur"]
+// ];
+
+//  // Fonction pour ajouter un utilisateur
+//  function ajouterUtilisateur() {
+//     let nom = document.getElementById("nom").value;
+//     let email = document.getElementById("email").value;
+//     let role = document.getElementById("role").value;
+
+//     if (nom && email && role) {
+//         // Vérifier si l'email existe déjà
+//         for (let i = 0; i < utilisateurs.length; i++) {
+//             if (utilisateurs[i][1] === email) {
+//                 alert(" Cet email est déjà utilisé !");
+//                 return;
+//             }
+//         }
+
+//         utilisateurs.push([nom, email, role]);
+//         afficherUtilisateurs();
+//     } else {
+//         alert(" Veuillez remplir tous les champs !");
+//     }
+// }
+
+// function ajouterUtilisateur() {
+//     let nom = document.getElementById("nom").value;
+//     let email = document.getElementById("email").value;
+//     let role = document.getElementById("role").value;
+
+//     if (nom && email && role) {
+//         // Vérifier si l'email existe déjà
+//         for (let i = 0; i < utilisateurs.length; i++) {
+//             if (utilisateurs[i][1] === email) {
+//                 alert(" Cet email est déjà utilisé !");
+//                 return;
+//             }
+//         }
+
+//         utilisateurs.push([nom, email, role]);
+//         afficherUtilisateurs();
+//     } else {
+//         alert(" Veuillez remplir tous les champs !");
+//     }
+// }
+
+//    // Fonction pour supprimer un utilisateur
+//    function supprimerUtilisateur(index) {
+//     utilisateurs.splice(index,1)
+//      afficherUtilisateurs();
+//  }
+
+let utilisateurs = [
+    ["Alice Dupont", "alice@example.com", "admin"],
+    ["Bob Martin", "bob@example.com", "utilisateur"],
+    ["Charlie Durand", "charlie@example.com", "moderateur"]
+];
+
+// // Fonction pour ajouter un utilisateur
+// function ajouterUtilisateur(nom, email, role) {
+//     if (nom && email && role) {
+//         // Vérifier si l'email existe déjà
+//         for (let i = 0; i < utilisateurs.length; i++) {
+//             if (utilisateurs[i][1] === email) {
+//                 prompt("Cet email est déjà utilisé !");
+//                 return;
+//             }
+//         }
+//         utilisateurs.push([nom, email, role]);
+//         afficherUtilisateurs();
+//     } else {
+//         prompt("Veuillez remplir tous les champs !");
+//     }
+// }
+
+// // Fonction pour afficher les utilisateurs
+// function afficherUtilisateurs() {
+//     let utilisateurString = utilisateurs.map(user => user.join(", ")).join("\n");
+//     prompt(utilisateurString);
+// }
+
+// // Fonction pour supprimer un utilisateur
+// function supprimerUtilisateur(index) {
+//     if (index >= 0 && index < utilisateurs.length) {
+//         utilisateurs.splice(index, 1);
+//         afficherUtilisateurs();
+//     } else {
+//         prompt("Index invalide !");
+//     }
+// }
+
+// // Exemple d'utilisation
+
+// // Ajouter un utilisateur
+// ajouterUtilisateur("David Lefèvre", "david@example.com", "utilisateur");
+
+// // Supprimer un utilisateur (par exemple, le deuxième utilisateur, index 1)
+// supprimerUtilisateur(1);
+
+
+let utilisateurs = [
+    ["Alice Dupont", "alice@example.com", "admin"],
+    ["Bob Martin", "bob@example.com", "utilisateur"],
+    ["Charlie Durand", "charlie@example.com", "moderateur"]
+];
+
+console.lor(utilisateurs)
+
+function ajouterUnuser(){
+
+    utilisateurs.pop()
+
+}
+ajouterUnuser()
+console.log("user",utilisateurs)
+
+
+
+function trouverUtilisateur(nom{
+    let user= utilisateurs[1].includes(mail)
+    console.log("user",user)
+    if(user===true){
+       // return` non : $(utilisateurs[0]}), mail : $(utilisateurs[1])} role : ${utilisateurs[2]}`:/
+       return "nom :" + utilisateurs[0]
+    }else{
+        return "utilisateur"
+    }
+}

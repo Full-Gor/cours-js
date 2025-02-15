@@ -59,3 +59,57 @@ console.log(fruits)
 //**********supprimer des elements */
 fruits.pop()// supprime le dernier element
 console.log(fruits)
+
+
+//*** MODIFICATION DE LORIGINAL DUN TABLEAU */
+
+//*********Modifier un element */
+
+
+fruits[0]="fraise"
+console.log("fruit modifier", fruits)
+
+//**********Ajouter un elements dans un tableau */
+
+fruits.push("mangue")//ajoute a la fin
+console.log("fruits avec mangue", fruits)
+
+fruits.unshift('cerise')//AJOUte en premier
+console.log(fruits)
+
+fruits.splice(1,0, "clementine" )//ajoute un deuxieme
+console.log(fruits)
+
+let index=fruits.indexOF("pomme")
+let result=fruits.splice(index , 1)//supprime pomme
+console.log("pomme supprimer",result)
+
+fruits.shift()// supprime 1er element du tableau
+console.log("supprime 1er elements", fruits)
+
+//*****supprimer des elements */
+fruits.pop()//supprime des elements
+console.log(fruits)
+
+//MODIFICATION EN CREANT UN NOUVEAU TABLEAU
+
+// extraire une partie du tableau sans modifier l'original
+let nouveauFruits= fruits.slice(1.1)
+console.log("new",nouveauFruits)
+
+créer un tableau contenant "pomme" "banane" "cerise" "orange"
+ensuite avec une nouvelles functions
+
+ajoute "kiwi" a la fin 
+ensuite avec une nouvelles functions
+ajoute "ananas" au debut
+ensuite avec une nouvelles functions
+supprime dernier element 
+ensuite avec une nouvelles functions
+affiche la longeur dy tableau
+
+utilise les console.log entre chaque nouvelle fonction
+
+
+creer un tableau 
+
