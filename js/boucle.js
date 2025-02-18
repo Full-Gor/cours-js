@@ -41,6 +41,7 @@ if(age <maxAge){
 }else{
     alert("Bienvenue")
 }
+
  
  
 // La boucle "for"
@@ -82,3 +83,27 @@ for(let i=0; i<products.length;i++){
  
 let productList=document.getElementById("product-list")
 productList.innerHTML=html
+
+
+
+let utilisateurs = [
+    ["Alice Dupont", "alice@example.com", "admin"],
+    ["Bob Martin", "bob@example.com", "utilisateur"],
+    ["Charlie Durand", "charlie@example.com", "moderateur"]
+];
+
+function ajouterUtilisateur(nom, email, role){
+    if(nom && email && role){
+        let i = 0;
+        while(i < utilisateurs.length){
+            if(utilisateurs [i][1]=== email){
+                prompt('sdfmghil')
+                return;
+            }
+            i++;
+        }
+        utilisateurs.push([nom, email, role])
+    }else{
+        prompt('sdfkgh')
+    }
+}
