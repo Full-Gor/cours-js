@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-.maClasse {
-    color: blue;
-    font-size: 20px;
-    text-align: center;
-}
-.modale {
+        .maClasse {
+            color: blue;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .modale {
             display: none;
             position: fixed;
             z-index: 1;
@@ -45,11 +46,25 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        #scrollBox {
+            position: fixed;
+            right: -100px; /* Hidden off screen initially */
+            top: 50%;
+            transition: right 0.5s ease;
+        }
+
+        .btn {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .
     </style>
 </head>
 <body>
-
-    <button class="btn">clique la</button>
+    <button class="btn">Clique la</button>
 
     <div id="modale" class="modale">
         <div class="modale-contenu">
@@ -59,7 +74,25 @@
     </div>
     <div id="text2"></div>
 
-    <script src="js/manipulationDuDom.js"></script>
+    <script>
+        let clique = document.querySelector(".btn");
+        let modale = document.getElementById("modale");
+        let fermer = document.getElementById("fermer");
+
+        clique.addEventListener("dblclick", function() {
+            clique.style.color = "red";
+            modale.style.display = "block";
+        });
+
+        fermer.addEventListener("click", function() {
+            modale.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target == modale) {
+                modale.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
-

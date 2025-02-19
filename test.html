@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.modal{
+    position: relative;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(199, 51, 191);
+    display: none;
+
+}
+
+
+
+.btn{
+    position: relative;
+    left: 50%;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+.fermeModal{
+    position: relative;
+    bottom: 200px;
+    left: 1128px;
+    cursor: pointer;
+}
+    </style>
+
+
+</head>
+<body>
+    <button class="btn1">bonjour</button>
+    <div class="modal"></div>
+    <button class="fermeModal">&times;</button>
+
+<div>
+    <button class="btnSKN">clique la</button>
+<ul class="maListe">
+    <li>emgk</li>
+    <li>emgk</li>
+    <li>emgk</li>
+    <li>emgk</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+    <script>
+let btn1=document.querySelector(".btn1")
+let modal=document.querySelector(".modal")
+let fermeModal=document.querySelector(".fermeModal")
+
+let maListe=document.querySelector(".maListe")
+let btnSKN=document.querySelector(".btnSKN")
+
+
+btnSKN.addEventListener('click',()=>{
+    const neuf=document.createElement("li")
+    neuf.textContent="szdlihj"
+    document.querySelector(".maListe").appendChild(neuf)
+
+})
+
+
+
+
+
+
+
+
+
+
+
+ btn1.addEventListener("click", function(){
+     btn1.textContent="ET"
+     modal.innerHTML="aurevoir"
+     modal.style.display="block" 
+     
+ })
+ btn1.addEventListener("mouseover", function(){
+     btn1.style.background="rgb(194, 42, 42)"
+     btn1.style.borderRadius="15px"
+ })
+ btn1.addEventListener("mouseleave", function(){
+     btn1.style.background="rgb(60, 35, 172)"
+     btn1.style.borderRadius="15px"
+ })
+ // maListe.addEventListener("click", function(){
+ //     modal.innerHTML=".laListe"
+ // })
+ fermeModal.addEventListener("click", function(){
+     modal.style.display="none"
+     btn1.innerHTML="à bientot"
+     btn1.style.background="rgb(199, 51, 191)"
+ })
+
+    </script>
+</body>
+</html>

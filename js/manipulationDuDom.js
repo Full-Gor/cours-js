@@ -80,3 +80,4 @@ let clique = document.querySelector(".btn");
                 modale.style.display = "none";
             }
         });
+     
